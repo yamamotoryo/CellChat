@@ -3964,7 +3964,7 @@ my_netVisual_heatmap <- function(object, comparison = c(1,2), measure = c("count
     if (!is.null(signaling)) {
       net.diff <- slot(object, slot.name)$prob[,,signaling]
       if (is.null(title.name)) {
-        title.name = paste0(signaling, " signaling network")
+        title.name = paste0(signaling, " signaling network",'\nReceiver')
       }
       legend.name <- "Communication Prob."
     } else if (!is.null(measure)) {
