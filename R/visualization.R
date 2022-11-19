@@ -4065,9 +4065,10 @@ my_netVisual_heatmap <- function(object, comparison = c(1,2), measure = c("count
   
   if (sum(abs(mat) > 0) == 1) {
     color.heatmap.use = c("white", color.heatmap.use)
-  } else {
-    mat[mat == 0] <- NA
-  }
+  } 
+#    else {
+#   mat[mat == 0] <- NA
+#  }
   ht1 = Heatmap(mat, col = color.heatmap.use, na_col = "white", name = legend.name,
                 bottom_annotation = col_annotation, left_annotation =row_annotation, top_annotation = ha2, right_annotation = ha1,
                 cluster_rows = cluster.rows,cluster_columns = cluster.rows,
