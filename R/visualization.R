@@ -4063,9 +4063,9 @@ my_netVisual_heatmap <- function(object, comparison = c(1,2), measure = c("count
   ha1 = rowAnnotation(Strength = anno_barplot(rowSums(abs(mat)), border = FALSE,gp = gpar(fill = color.use, col=color.use)), show_annotation_name = FALSE)
   ha2 = HeatmapAnnotation(Strength = anno_barplot(colSums(abs(mat)), border = FALSE,gp = gpar(fill = color.use, col=color.use)), show_annotation_name = FALSE)
   
-  if (sum(abs(mat) > 0) == 1) {
+# if (sum(abs(mat) > 0) == 1) {
     color.heatmap.use = c("white", color.heatmap.use)
-  } 
+#  } 
 #    else {
 #   mat[mat == 0] <- NA
 #  }
